@@ -1,10 +1,10 @@
 /************** includes ******************/
 ///<reference path = "../../database/database_models.ts"/>
-///<reference path = "../../services/model_validation/booking_validation.ts"/>
+///<reference path = "../../services/model_validation/booking/booking_validation.ts"/>
 ///<reference path = "../../services/booking/booking_service.ts"/>
-var databaseModels = require('../../database/database_models');
-var validation = require('../../services/model_validation/booking_validation');
-var _bookingService = require('../../services/booking/booking_service');
+import * as  databaseModels from'../../database/database_models';
+import * as  validation from '../../services/model_validation/booking/booking_validation';
+import * as  _bookingService from '../../services/booking/booking_service';
 
 
 export function BookingApi (app) {
@@ -15,7 +15,7 @@ export function BookingApi (app) {
     app.get('/api/bookings/bookeddates', function (req, res) {
        var bookingService = new _bookingService.BookingService(req.body)
        bookingService.FindBookedDates().done(function(dates){
-           
+           res.json(dates);
        })
            
        

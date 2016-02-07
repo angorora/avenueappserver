@@ -11,7 +11,7 @@ export class CheckOutValidation{
   public  VaidateDuplication(){
       return  new Promise<boolean>((resolve,reject) =>{
           let valid = true;
-            databaseModels.DatabaseModels.Checkout.find({
+            databaseModels.DatabaseModels.CheckOut.find({
                 checkin_datetime : this.model.checkin_datetime,
             }).where("booking").equals(this.model.booking)
             .exec( function(err, checkouts:any) {

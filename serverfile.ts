@@ -6,7 +6,7 @@
 ///<reference path = "database/database_config.ts"/>
 ///<reference path = "api/client/client_api.ts"/>
 ///<reference path = "api/booking/booking_api.ts"/>
-///<reference path = "api/member/member_api.ts"/>
+///<reference path = "api/guest/guest_api.ts"/>
 ///<reference path = "api/checkin/checkin_api.ts"/>
 ///<reference path = "api/checkout/checkout_api.ts"/>
 
